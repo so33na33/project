@@ -5,7 +5,7 @@
                 <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col">UserId</th>
+                        
                         <th scope="col">UserName</th>
                         <th scope="col">Email ID</th>
                         <th scope="col">Phone No</th>
@@ -14,14 +14,7 @@
                     </thead>
                     <tbody>
                       <tr *ngFor="let i of data">
-                        <th scope="row">
-                          <div *ngIf="i.isEdit">
-                            <input type="text" name="userid" class="form-control" [(ngModel)]="i.userId">
-                          </div>
-                          <div *ngIf="!i.isEdit">
-                            {{i.userId}}
-                          </div>
-                        </th>
+                        
                         <td>
                           <div *ngIf="i.isEdit">
                             <input type="text" name="username" class="form-control" [(ngModel)]="i.userName">
@@ -37,6 +30,14 @@
                           </div>
                           <div *ngIf="!i.isEdit">
                             {{i.email}}
+                          </div>
+                        </td>
+                        <td>
+                          <div *ngIf="i.isEdit">
+                            <input type="text" name="email" class="form-control" [(ngModel)]="i.phoneNo"  >
+                          </div>
+                          <div *ngIf="!i.isEdit">
+                            {{i.phoneNo}}
                           </div>
                         </td>
                         

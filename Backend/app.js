@@ -35,6 +35,7 @@ app.get("/home",(req,res)=>{
 app.post("/register",(req,res)=>{
     
     const data=req.body
+    console.log(data)
     const ob=new register(data)
     ob.save(
         (error,data)=>{

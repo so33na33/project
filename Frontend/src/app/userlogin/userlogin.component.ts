@@ -44,12 +44,12 @@ export class UserloginComponent implements OnInit {
 
   Adduser(){
     console.log(this.user)
-    if(this.user.password == this.user.confirmPassword)
+    if( this.user.password == this.user.confirmPassword)
     {
-console.log("password match")
-this.api.adduser(this.user).subscribe(
-  (data:any)=>{
-    alert("success")
+        console.log("password match")
+        this.api.adduser(this.user).subscribe(
+        (data:any)=>{
+         alert("success")
   }
 )
     }else{
